@@ -1,0 +1,32 @@
+{% extends "general.html" %}
+
+    {% block content %}
+        <div class="container">
+            
+            <div class="row">
+            	<div class="col-lg-8 col-lg-offset-2">
+            		<table class="table table-striped table-bordered">
+            			<thead>
+	            			<tr>
+	     						<th>Nombre</th>
+	     						<th>Fecha inicio</th>
+	     						<th>Fecha final</th>
+	     						<th>Descripcion</th>
+	     						
+	  						</tr>
+ 						</thead>
+	            		{% for proyecto in proyecto_lista %}
+							<tr>			
+								<td>{{proyecto.nombre}}</td>
+								<td>{{proyecto.comienzo_pro}}</td>
+								<td>{{proyecto.final_pro}}</td>
+								<td>{{proyecto.descripcion}}</td>			
+							</tr>
+						{% endfor %}
+            		</table>
+
+            	</div>
+            </div>
+            
+        </div>
+  {% endblock %}
